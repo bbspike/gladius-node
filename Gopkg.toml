@@ -30,7 +30,7 @@
   name = "github.com/gladiusio/gladius-networkd"
 
 [[constraint]]
-  version = "~0.3.0"
+  branch = "hackathon"
   name = "github.com/gladiusio/gladius-cli"
 
 [[constraint]]
