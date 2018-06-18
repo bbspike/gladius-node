@@ -143,22 +143,16 @@ else
     endif
 endif
 docker_image:
-	docker build --tag ${DOCKER_IMAGE}:${DOCKER_RELEASE} \
-		--build-arg gladius_release=${DOCKER_RELEASE} \
-		--build-arg gladius_os=${DOCKER_OS} \
-		--build-arg gladius_architecture=${DOCKER_ARCH} \
+	docker build --tag  gladiusio/gladius-node:hackathon \
 		-f ./ops/Dockerfile ./ops
 
 docker_push: docker_image
-	docker push ${DOCKER_IMAGE}:${DOCKER_RELEASE}
+	docker push gladiusio/gladius-node:hackathon
 
 # execute local docker compose for testing
 docker_compose:
 	# build docker compose image
-	docker-compose -p gladius -f ops/docker-compose.yml build \
-		--build-arg gladius_release=${DOCKER_RELEASE} \
-		--build-arg gladius_os=${DOCKER_OS} \
-		--build-arg gladius_architecture=${DOCKER_ARCH} \
+	docker-compose -p gladius -f ops/docker-compose.yml build
 
 	# start services
 	docker-compose -p gladius -f ops/docker-compose.yml up -d

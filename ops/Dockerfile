@@ -18,16 +18,13 @@ RUN mkdir -p ${GLADIUSBASE}/content \
 	&& touch ${GLADIUSBASE}/gladius-controld.toml
 
 # download and install gladius binaries
-ARG gladius_release
-ARG gladius_os
-ARG gladius_architecture
 RUN curl -L \
-		https://github.com/gladiusio/gladius-node/releases/download/${gladius_release}/gladius-${gladius_release}-${gladius_os}-${gladius_architecture}.tar.gz \
+		https://gladius-node-hackathon.nyc3.digitaloceanspaces.com/gladius-hackathon-linux-amd64.tar.gz \
 		-o /tmp/gladius.tar.gz \
   && tar -xzf /tmp/gladius.tar.gz -C /usr/local/bin/ --strip-components 2 \
   && rm -f /tmp/gladius.tar.gz
 # download the gladius content file
-RUN curl -L https://github.com/gladiusio/gladius-node/releases/download/${gladius_release}/content.tar.gz \
+RUN curl -L https://gladius-node-hackathon.nyc3.digitaloceanspaces.com/content.tar.gz \
          -o /tmp/content.tar.gz \
   && tar -xzf /tmp/content.tar.gz -C ${GLADIUSBASE}/content/ --strip-components 1 \
   && rm -f /tmp/content.tar.gz

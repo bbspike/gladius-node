@@ -29,11 +29,11 @@ build() {
 }
 
 # Create some arm packages
-build linux arm64
-build linux arm
+# build linux arm64
+# build linux arm
 
-for dist in "linux" "darwin" "windows"; do
-  for arch in "amd64" "386"; do
+for dist in "linux"; do
+  for arch in "amd64" ; do
     build $dist $arch
   done
 done
