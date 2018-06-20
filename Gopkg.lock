@@ -11,7 +11,7 @@
   branch = "master"
   name = "github.com/aristanetworks/goarista"
   packages = ["monotime"]
-  revision = "59944ff78bc1de686b0aba1444dfd380f48f03d4"
+  revision = "06cfa1db77dae2425e143980408e642f7a9d5b09"
 
 [[projects]]
   branch = "master"
@@ -328,7 +328,7 @@
     "pbkdf2",
     "scrypt"
   ]
-  revision = "027cca12c2d63e3d62b670d901e8a2c95854feec"
+  revision = "7f39a6fea4fe9364fb61e1def6a268a51b4f3a06"
 
 [[projects]]
   branch = "master"
@@ -347,7 +347,7 @@
     "windows/svc/eventlog",
     "windows/svc/mgr"
   ]
-  revision = "6c888cc515d3ed83fc103cf1d84468aad274b0a7"
+  revision = "ad87a3a340fa7f3bed189293fbfa7a9b7e021ae1"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -370,7 +370,7 @@
     "imports",
     "internal/fastwalk"
   ]
-  revision = "53440098a4ee92255ee62fe260cd95970c544076"
+  revision = "25b95b48224cce18163c7d49dcfb89a2d5ecd209"
 
 [[projects]]
   name = "gopkg.in/AlecAivazis/survey.v1"

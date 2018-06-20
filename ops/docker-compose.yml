@@ -27,3 +27,12 @@ services:
     volumes:
       - content:/gladius/content
     entrypoint: gladius-networkd
+
+  gladius-setup:
+    network_mode: "host"
+    depends_on:
+      - gladius-controld
+    container_name: gladius-setup
+    build:
+      context: ./
+    entrypoint: ./gladius/start.sh
