@@ -33,6 +33,8 @@ services:
     depends_on:
       - gladius-controld
     container_name: gladius-setup
+    environment:
+      - GLADIUS.HOSTIP
     build:
       context: ./
     entrypoint: ./gladius/start.sh
