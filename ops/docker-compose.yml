@@ -34,7 +34,7 @@ services:
       - gladius-controld
     container_name: gladius-setup
     environment:
-      - GLADIUS.HOSTIP
+      - GLADIUS_HOSTIP
     build:
       context: ./
     entrypoint: ./gladius/start.sh

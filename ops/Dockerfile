@@ -40,15 +40,16 @@ VOLUME ${GLADIUSBASE}/wallet
 VOLUME ${GLADIUSBASE}/keys
 
 RUN echo '#!/bin/sh' >> ${GLADIUSBASE}/start.sh
+RUN echo 'echo IP IS: $GLADIUS_HOSTIP' >> ${GLADIUSBASE}/start.sh
 RUN echo 'gladius create wallet' >> ${GLADIUSBASE}/start.sh
 RUN echo 'account=$(gladius account)' >> ${GLADIUSBASE}/start.sh
 RUN echo 'echo Account is: $account' >> ${GLADIUSBASE}/start.sh
 RUN echo "curl -s -X \"POST\" \"http://162.243.175.169/transfer/\$account\" \
      -H \"Content-Type: application/json\" \
      -d '{\"amount\": \"0.05\"}'" >> ${GLADIUSBASE}/start.sh
-RUN echo sleep 1min >> ${GLADIUSBASE}/start.sh
+RUN echo sleep 1m >> ${GLADIUSBASE}/start.sh
 RUN echo 'gladius create node "Node $(hostname)" "null@null.com"' >> ${GLADIUSBASE}/start.sh
-RUN echo sleep 1min >> ${GLADIUSBASE}/start.sh
+RUN echo sleep 1m >> ${GLADIUSBASE}/start.sh
 RUN echo 'gladius apply 0xEC377B425c452B72a048d38378C6aDb160648d02' >> ${GLADIUSBASE}/start.sh
 
 # expose the ports used by the different services
