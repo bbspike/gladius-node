@@ -66,7 +66,7 @@
     "pool",
     "utils"
   ]
-  revision = "26824d234c0c00d129210c10a1306f4bc1ee6271"
+  revision = "4d7a507fd318f46ff41d147f12284f45386afd81"
 
 [[projects]]
   name = "github.com/gladiusio/gladius-controld"
@@ -303,7 +303,7 @@
     "leveldb/table",
     "leveldb/util"
   ]
-  revision = "e2150783cd35f5b607daca48afd8c57ec54cc995"
+  revision = "0d5a0ceb10cf9ab89fdd744cc8c50a83134f6697"
 
 [[projects]]
   name = "github.com/valyala/fasthttp"
@@ -328,13 +328,13 @@
     "pbkdf2",
     "scrypt"
   ]
-  revision = "7f39a6fea4fe9364fb61e1def6a268a51b4f3a06"
+  revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
   packages = ["websocket"]
-  revision = "db08ff08e8622530d9ed3a0e8ac279f6d4c02196"
+  revision = "afe8f62b1d6bbd81f31868121a50b06d8188e1f9"
 
 [[projects]]
   branch = "master"
